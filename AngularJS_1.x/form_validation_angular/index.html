@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title>Angular Form Validation</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/angular.min.js"> </script>
+	<script src="app.js"> </script>
+
+</head>
+
+<body ng-controller="MyForm">
+    
+	 <form class="container" name="regForm" ng-submit="onSubmit()" novalidate="novalidate">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" 
+			placeholder="Email" ng-model="formModel.email">
+		</div>
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" 
+			placeholder="Name" ng-model="formModel.name">
+		</div>
+		<div class="form-group">
+			<label for="phone">Phone</label>
+			<input type="phone" class="form-control" id="phone" 
+			placeholder="Phone" ng-model="formModel.phone">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	<!-- <pre> {{ regForm | json}}</pre> -->
+	
+</body>
+
+</html>

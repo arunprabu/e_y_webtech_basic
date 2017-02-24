@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title>Binding Images with ng-src</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/angular.min.js"> </script>
+    <script src="app.js"> </script>
+
+</head>
+
+<body ng-controller="MyFormCtrl">
+
+	<div class="container">
+        
+        <h1> Name : {{ frameworkDetails.name }}</h1>
+        <h2> Version : {{ frameworkDetails.version }}</h2>
+        <p>Normal Img</p>
+        <img src="images/logo.png" style="width: 200px;">
+        
+        <br><br>
+        <p>Binding Images - will result in error </p>
+        <img src="{{ frameworkDetails.logo }}" style="width: 200px;">
+        <!-- look at the console for error -->
+
+        <br><br>
+        <p>Binding Images with ng-src </p>
+        <img ng-src="{{ frameworkDetails.logo }}" style="width: 200px;">
+	</div>
+
+</body>
+
+</html>

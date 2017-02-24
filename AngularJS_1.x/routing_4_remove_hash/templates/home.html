@@ -1,0 +1,29 @@
+<div ng-controller="HomeController">
+	<h1> Home </h1>
+	<h3>Steps to remove # from URL </h3>
+
+	<a href="https://scotch.io/tutorials/pretty-urls-in-angularjs-removing-the-hashtag">Go to the Article </a>
+
+	<button type="button" ng-click="loadData()">Load Data</button>
+
+	<table class="table table-striped"  style="height:400px">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>E-Mail</th>
+				<th>City</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in persons | orderBy: 'id'" > <!-- orderBy: '-id' -->
+				<td>{{ person.id }}</td>
+				<td>{{ person.first_name }}</td>
+				<td>{{ person.last_name }}</td>
+				<td>{{ person.email }}</td>
+				<td>{{ person.city }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

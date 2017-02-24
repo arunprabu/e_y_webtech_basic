@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+	<title>Angular Routing Example</title>
+	<base href="/">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"> </script>
+	<!-- Angular Router -->
+	<script src="https://code.angularjs.org/1.5.8/angular-route.js"> </script>
+	<script src="app.js"> </script>
+	<script src="controllers/controller.js"> </script>
+</head>
+
+<body>
+
+	<div data-ng-include=" 'partials/header.html' ">
+	</div>
+
+	<div class="container">
+		<!-- main content comes here, dynamically -->
+		<div ng-view></div>
+	</div>
+	
+	<div data-ng-include=" 'partials/footer.html' ">
+	</div>
+</body>
+
+</html>
